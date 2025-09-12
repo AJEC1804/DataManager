@@ -4,6 +4,8 @@
  */
 package view;
 
+import javax.swing.*;
+
 /**
  *
  * @author Jarvi
@@ -100,7 +102,22 @@ public class login extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+String usuario = jTextField1.getText();
+String password = jPasswordField1.getText();
+
+if (usuario.isEmpty() || password.isEmpty()){
+    JOptionPane.showMessageDialog(null, "Algun campo esta vacio");
+}else{
+    if(usuario.equals("admin") && password.equals("1234")){
+        JOptionPane.showMessageDialog(null, "Bienvenido");
+        panel_control pc = new panel_control ();
+        pc.setVisible(true);
+        this.dispose();
+         
+    }else{
+        JOptionPane.showMessageDialog(null, "Su usuario o contraseña incorrecta");
+    }
+ }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
