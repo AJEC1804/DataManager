@@ -4,6 +4,8 @@
  */
 package pro_aula_2_semestre;
 
+import view.*;
+
 /**
  *
  * @author Jarvi
@@ -15,6 +17,10 @@ public class Pro_aula_2_semestre {
      */
     public static void main(String[] args) {
         System.out.println("hola mundo");
+        login pc = new login ();
+        pc.setVisible(true);
+        
+        
             
     }
     
